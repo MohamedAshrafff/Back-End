@@ -1,6 +1,5 @@
 package com.sumerge.entities;
 
-import com.sumerge.AdvancedCourses;
 import com.sumerge.task3.CourseRecommender;
 import com.sumerge.task3.DatabaseClasses.Course;
 import org.junit.jupiter.api.Test;

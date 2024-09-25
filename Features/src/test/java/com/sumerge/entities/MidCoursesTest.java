@@ -1,6 +1,5 @@
 package com.sumerge.entities;
 
-import com.sumerge.MidCourses;
 import com.sumerge.repos.JPACourseRepository;
 import com.sumerge.task3.DatabaseClasses.Course;
 import org.junit.jupiter.api.BeforeEach;
