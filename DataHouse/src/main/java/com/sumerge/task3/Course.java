@@ -1,4 +1,4 @@
-package com.sumerge;
+package com.sumerge.task3;
 
 public class Course {
     String courseName;

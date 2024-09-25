@@ -1,4 +1,4 @@
-package com.sumerge;
+package com.sumerge.task3;
 
 import org.springframework.stereotype.Component;
 
@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 
 
-@Component
 public class BasicCourses implements CourseRecommender {
 
     @Override
