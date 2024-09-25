@@ -1,4 +1,4 @@
-package com.sumerge;
+package com.sumerge.repos;
 
 import com.sumerge.task3.DatabaseClasses.Course;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +29,9 @@ public class CourseRepository {
         String sql = "INSERT INTO Course (course_name, course_description, course_credit, author_id)" +
                 "VALUES (?, ?, ?, ?)";
         jdbcTemplate.update(sql,
-                course.getCourseName() ,
-                course.getCourseDescription() ,
-                course.getCourseCredit() , 1);
+                course.getCourse_name() ,
+                course.getCourse_description() ,
+                course.getCourse_credit() , 1);
         System.out.println("____ADDED COURSE____");
         System.out.println("Courses Count : "+getCoursesCount());
         return course;
@@ -43,9 +43,9 @@ public class CourseRepository {
         String sql = "UPDATE Course SET course_name = ? ,course_description = ? , course_credit = ? WHERE course_id = ?";
 
         jdbcTemplate.update(sql,
-                course.getCourseName() ,
-                course.getCourseDescription() ,
-                course.getCourseCredit() , id);
+                course.getCourse_name() ,
+                course.getCourse_description() ,
+                course.getCourse_credit() , id);
         System.out.println("____UPDATED SUCCESSFULLY____");
         getCourseById(id);
         return course;
@@ -63,9 +63,9 @@ public class CourseRepository {
                         rs.getInt("course_credit")
                 ),id);
         System.out.println("Course Got from DB is :");
-        System.out.println("Name : "+ course.getCourseName());
-        System.out.println("Description : " + course.getCourseDescription());
-        System.out.println("Course Credit : " + course.getCourseCredit());
+        System.out.println("Name : "+ course.getCourse_name());
+        System.out.println("Description : " + course.getCourse_description());
+        System.out.println("Course Credit : " + course.getCourse_credit());
         System.out.println("Author ID : "+ course.getAuthor_id());
         return course;
     }

@@ -1,9 +1,10 @@
-package com.sumerge;
+package com.sumerge.controllers;
 
+import com.sumerge.services.CourseService;
 import com.sumerge.task3.DatabaseClasses.Course;
+import com.sumerge.task3.DatabaseClasses.CourseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +15,6 @@ public class CourseController {
 
     @Autowired
     CourseService courseService;
-
 
     @GetMapping("/view")
     public ResponseEntity<List<Course>> viewAllCourses() {
@@ -59,5 +59,17 @@ public class CourseController {
         }
     }
 
+    @GetMapping("courseDTO/{id}")
+    public ResponseEntity<CourseDTO> courseDTO(@PathVariable int id) {
+        CourseDTO newDTO = courseService.getCourseDTOById(id);
+        System.out.println(newDTO.toString());
+        return ResponseEntity.ok(newDTO);
+    }
+
+    @GetMapping("/paginated")
+    public List<Course> getCourses(@RequestParam(defaultValue = "0") int page,
+                                   @RequestParam(defaultValue = "5") int size) {
+        return courseService.getPaginatedCourses(page, size);
+    }
 
 }

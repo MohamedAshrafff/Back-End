@@ -1,5 +1,11 @@
-package com.sumerge;
+package com.sumerge.configs;
 
+import com.sumerge.AdvancedCourses;
+import com.sumerge.CourseMapper;
+import com.sumerge.services.AuthorService;
+import com.sumerge.services.CourseService;
+import com.sumerge.MidCourses;
+import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.*;
 import com.sumerge.task3.*;
@@ -27,9 +33,15 @@ public class AppConfig {
         return new JdbcTemplate(dataSource()) ;
     };
 
+
     @Bean
     public CourseService courseService(@Qualifier("advancedRecommenderBean") CourseRecommender courseRecommender){
-        return new CourseService(courseRecommender );
+        return new CourseService(courseRecommender);
+    }
+
+    @Bean
+    public CourseMapper courseMapper() {
+        return Mappers.getMapper(CourseMapper.class);
     }
 
     @Bean(name = "basicRecommenderBean")
