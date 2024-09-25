@@ -2,8 +2,8 @@ package com.sumerge.controllers;
 
 
 import com.sumerge.services.RatingService;
-import com.sumerge.task3.DatabaseClasses.Rating;
 import com.sumerge.task3.DTOs.RatingDTO;
+import com.sumerge.task3.DatabaseClasses.Rating;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

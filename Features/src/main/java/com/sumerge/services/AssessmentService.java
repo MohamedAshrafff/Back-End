@@ -3,8 +3,8 @@ package com.sumerge.services;
 import com.sumerge.exceptions.NotFoundException;
 import com.sumerge.mappers.AssessmentMapper;
 import com.sumerge.repos.JPAAssessmentRepository;
-import com.sumerge.task3.DatabaseClasses.Assessment;
 import com.sumerge.task3.DTOs.AssessmentDTO;
+import com.sumerge.task3.DatabaseClasses.Assessment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -3,8 +3,8 @@ package com.sumerge.services;
 import com.sumerge.exceptions.NotFoundException;
 import com.sumerge.mappers.RatingMapper;
 import com.sumerge.repos.JPARatingRepository;
-import com.sumerge.task3.DatabaseClasses.Rating;
 import com.sumerge.task3.DTOs.RatingDTO;
+import com.sumerge.task3.DatabaseClasses.Rating;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

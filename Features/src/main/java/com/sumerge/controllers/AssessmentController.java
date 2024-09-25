@@ -2,8 +2,8 @@ package com.sumerge.controllers;
 
 
 import com.sumerge.services.AssessmentService;
-import com.sumerge.task3.DatabaseClasses.Assessment;
 import com.sumerge.task3.DTOs.AssessmentDTO;
+import com.sumerge.task3.DatabaseClasses.Assessment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

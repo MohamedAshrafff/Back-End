@@ -1,7 +1,7 @@
 package com.sumerge.mappers;
 
-import com.sumerge.task3.DatabaseClasses.Assessment;
 import com.sumerge.task3.DTOs.AssessmentDTO;
+import com.sumerge.task3.DatabaseClasses.Assessment;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

@@ -1,18 +1,21 @@
 package com.sumerge;
 
-import com.sumerge.repos.CourseRepository;
+import com.sumerge.task3.CourseRecommender;
 import com.sumerge.task3.DatabaseClasses.Course;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import com.sumerge.task3.*;
 
 public class AdvancedCourses implements CourseRecommender {
 
-    @Autowired
-    CourseRepository courseRepo;
     @Override
     public List<Course> recommendedCourses() {
-        return courseRepo.getAllCourses();
+        return new ArrayList<>(Arrays.asList(
+                new Course("MID Courses"),
+                new Course("Object Oriented Programming"),
+                new Course("Data Analytics 1")
+        ));
     }
 
 }
