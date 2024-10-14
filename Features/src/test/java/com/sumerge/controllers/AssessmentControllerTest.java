@@ -31,7 +31,7 @@ import static org.mockito.Mockito.when;
 
 @WebMvcTest(controllers = AssessmentController.class,
         excludeAutoConfiguration = SecurityAutoConfiguration.class)
-@ContextConfiguration(classes =AssessmentController.class)
+@ContextConfiguration(classes =AssessmentController.class) //TODO
 @ComponentScan("com.sumerge.exceptions")
 class AssessmentControllerTest {
 
